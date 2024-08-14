@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pdf iText使用 | 小虎聊编程</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="点赞、转发、收藏">
+    <meta name="keywords" content="小虎聊编程,vuepress,自建博客,小虎">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="小虎">
+    
+    <link rel="preload" href="/assets/css/0.styles.bfd62ff8.css" as="style"><link rel="preload" href="/assets/js/app.5a9922ae.js" as="script"><link rel="preload" href="/assets/js/4.006c63d4.js" as="script"><link rel="preload" href="/assets/js/1.288c0ca6.js" as="script"><link rel="preload" href="/assets/js/22.efadb99b.js" as="script"><link rel="preload" href="/assets/js/13.ee825438.js" as="script"><link rel="prefetch" href="/assets/js/10.ac013b81.js"><link rel="prefetch" href="/assets/js/11.a3389783.js"><link rel="prefetch" href="/assets/js/12.fef5bfea.js"><link rel="prefetch" href="/assets/js/14.f2540291.js"><link rel="prefetch" href="/assets/js/15.c90a8d05.js"><link rel="prefetch" href="/assets/js/16.a0f66fc8.js"><link rel="prefetch" href="/assets/js/17.304e7b18.js"><link rel="prefetch" href="/assets/js/18.779e9ff4.js"><link rel="prefetch" href="/assets/js/19.ec477283.js"><link rel="prefetch" href="/assets/js/20.bc52edb2.js"><link rel="prefetch" href="/assets/js/21.08da026d.js"><link rel="prefetch" href="/assets/js/23.ac88845d.js"><link rel="prefetch" href="/assets/js/24.fbf07fed.js"><link rel="prefetch" href="/assets/js/25.28913681.js"><link rel="prefetch" href="/assets/js/26.9ea2cd2c.js"><link rel="prefetch" href="/assets/js/27.1d5c1cfe.js"><link rel="prefetch" href="/assets/js/28.acf35971.js"><link rel="prefetch" href="/assets/js/29.dedcc405.js"><link rel="prefetch" href="/assets/js/30.14a48a71.js"><link rel="prefetch" href="/assets/js/31.362879aa.js"><link rel="prefetch" href="/assets/js/32.1fb795df.js"><link rel="prefetch" href="/assets/js/33.e4498336.js"><link rel="prefetch" href="/assets/js/34.dcfab778.js"><link rel="prefetch" href="/assets/js/5.eca25d26.js"><link rel="prefetch" href="/assets/js/6.bd783111.js"><link rel="prefetch" href="/assets/js/7.de17d2ac.js"><link rel="prefetch" href="/assets/js/8.93658f34.js"><link rel="prefetch" href="/assets/js/9.4bd9e436.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.c7c3b8bd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bfd62ff8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>小虎聊编程</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>小虎</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2024
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小虎聊编程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-eye"></i>
+  本站指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      技术分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaSE
+</a></li><li class="dropdown-subitem"><a href="/技术文章/java高级/javaee.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaEE
+</a></li></ul></li><li class="dropdown-item"><h4>前端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/vue/vue01.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端基础
+</a></li></ul></li><li class="dropdown-item"><h4>流媒体</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/流媒体/协议.html" class="nav-link"><i class="iconfont undefined"></i>
+  协议基础
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/FFmpeg.html" class="nav-link"><i class="iconfont undefined"></i>
+  FFmpeg
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/SDL.html" class="nav-link"><i class="iconfont undefined"></i>
+  SDL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/Webrtc.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webrtc
+</a></li></ul></li><li class="dropdown-item"><h4>python</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/python/python.html" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-subitem"><a href="/技术文章/python/django.html" class="nav-link"><i class="iconfont undefined"></i>
+  django
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      生活分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/生活分享/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  生活分享
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-blog"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://zz-html.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  小虎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    小虎
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>21</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>21</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-eye"></i>
+  本站指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      技术分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/java/javase.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaSE
+</a></li><li class="dropdown-subitem"><a href="/技术文章/java高级/javaee.html" class="nav-link"><i class="iconfont undefined"></i>
+  JavaEE
+</a></li></ul></li><li class="dropdown-item"><h4>前端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/vue/vue01.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端基础
+</a></li></ul></li><li class="dropdown-item"><h4>流媒体</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/流媒体/协议.html" class="nav-link"><i class="iconfont undefined"></i>
+  协议基础
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/FFmpeg.html" class="nav-link"><i class="iconfont undefined"></i>
+  FFmpeg
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/SDL.html" class="nav-link"><i class="iconfont undefined"></i>
+  SDL
+</a></li><li class="dropdown-subitem"><a href="/技术文章/流媒体/Webrtc.html" class="nav-link"><i class="iconfont undefined"></i>
+  Webrtc
+</a></li></ul></li><li class="dropdown-item"><h4>python</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/python/python.html" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-subitem"><a href="/技术文章/python/django.html" class="nav-link"><i class="iconfont undefined"></i>
+  django
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      生活分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/生活分享/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  生活分享
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-blog"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://zz-html.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  小虎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>java高级</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/技术文章/java高级/javaee.html" class="sidebar-link">Java高级</a></li><li><a href="/技术文章/java高级/pdf.html" class="active sidebar-link">Pdf iText使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#包引用" class="sidebar-link">包引用</a></li><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#简单示例" class="sidebar-link">简单示例</a></li><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#表格示例" class="sidebar-link">表格示例</a></li><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#饼图示例" class="sidebar-link">饼图示例</a></li><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#折线图示例" class="sidebar-link">折线图示例</a></li><li class="sidebar-sub-header"><a href="/技术文章/java高级/pdf.html#综合示例" class="sidebar-link">综合示例</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>Pdf iText使用</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>小虎</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2024
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>Pdf iText使用</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>小虎</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2024-08-14 12:00:00</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      SpringBoot
+    </span><span class="tag-item" data-v-484a899e>
+      Pdf
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>官方地址：https://kb.itextpdf.com/<br>
+准备工作：<br>
+搭建springboot工程<br>
+下载中文字体包simsun.ttf，放在工程resources/fonts目录</p> <h2 id="包引用"><a href="#包引用" class="header-anchor">#</a> 包引用</h2> <p>引入PDF包。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;dependency&gt;
+        &lt;groupId&gt;com.itextpdf&lt;/groupId&gt;
+        &lt;artifactId&gt;itext7-core&lt;/artifactId&gt;
+        &lt;version&gt;7.2.0&lt;/version&gt;
+        &lt;type&gt;pom&lt;/type&gt;
+    &lt;/dependency&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如果需要绘制图形（例如饼图、折线图），需要结合JFreeChart使用。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.jfree&lt;/groupId&gt;
+        &lt;artifactId&gt;jfreechart&lt;/artifactId&gt;
+        &lt;version&gt;1.5.3&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="简单示例"><a href="#简单示例" class="header-anchor">#</a> 简单示例</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>@RestController
+@RequestMapping(&quot;/pdf&quot;)
+public class PdfController {
+
+    @GetMapping(&quot;/test&quot;)
+    public ResponseEntity&lt;byte[]&gt; test() {
+        try {
+			byte[] pdfContent = createPdfText();
+
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_PDF);
+			headers.setContentDispositionFormData(&quot;attachment&quot;, &quot;sample.pdf&quot;);
+			return new ResponseEntity&lt;&gt;(pdfContent, headers, HttpStatus.OK);
+		} catch (IOException e) {
+			return new ResponseEntity&lt;&gt;(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+
+	private byte[] createPdfText() throws IOException {
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+		PdfDocument pdf = new PdfDocument(writer);
+		Document document = new Document(pdf);
+
+		String fontPath = new ClassPathResource(&quot;fonts/SimSun.ttf&quot;).getFile().getAbsolutePath();
+		PdfFont font = PdfFontFactory.createFont(fontPath);
+		document.add(new Paragraph(&quot;你好 World!&quot;).setFont(font).setFontSize(12));
+
+		document.close();
+		return byteArrayOutputStream.toByteArray();
+	}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h2 id="表格示例"><a href="#表格示例" class="header-anchor">#</a> 表格示例</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>	public byte[] createPdfTable() throws IOException {
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+		PdfDocument pdf = new PdfDocument(writer);
+		Document document = new Document(pdf);
+
+		String fontPath = new ClassPathResource(&quot;fonts/SimSun.ttf&quot;).getFile().getAbsolutePath();
+		PdfFont font = PdfFontFactory.createFont(fontPath);
+
+		document.add(new Paragraph(&quot;表格示例&quot;).setFont(font).setFontSize(12));
+		float[] columnWidths = {1, 2, 2};
+		Table table = new Table(columnWidths);
+		table.addHeaderCell(new Cell().add(new Paragraph(&quot;ID&quot;).setFont(font)));
+		table.addHeaderCell(new Cell().add(new Paragraph(&quot;姓名&quot;).setFont(font)));
+		table.addHeaderCell(new Cell().add(new Paragraph(&quot;描述&quot;).setFont(font)));
+		for (int i = 1; i &lt;= 5; i++) {
+			table.addCell(new Cell().add(new Paragraph(String.valueOf(i))));
+			table.addCell(new Cell().add(new Paragraph(&quot;Item &quot; + i)));
+			table.addCell(new Cell().add(new Paragraph(&quot;Item &quot; + i + &quot; description.&quot;)));
+		}
+		document.add(table);
+
+		document.close();
+		return byteArrayOutputStream.toByteArray();
+	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="饼图示例"><a href="#饼图示例" class="header-anchor">#</a> 饼图示例</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>	private byte[] createPdfPie() throws IOException {
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+		PdfDocument pdf = new PdfDocument(writer);
+		Document document = new Document(pdf);
+
+		String fontPath = new ClassPathResource(&quot;fonts/SimSun.ttf&quot;).getFile().getAbsolutePath();
+		PdfFont font = PdfFontFactory.createFont(fontPath);
+		document.add(new Paragraph(&quot;饼图示例&quot;).setFont(font).setFontSize(12));
+		// 创建饼图数据集
+		DefaultPieDataset dataset = new DefaultPieDataset();
+		dataset.setValue(&quot;分类 A&quot;, 40);
+		dataset.setValue(&quot;分类 B&quot;, 30);
+		dataset.setValue(&quot;分类 C&quot;, 20);
+		dataset.setValue(&quot;分类 D&quot;, 10);
+		// 创建饼图
+		JFreeChart pieChart = ChartFactory.createPieChart(
+			&quot;饼图 Test&quot;,   // 图表标题
+			dataset,               // 数据集
+			true,                  // 是否显示图例
+			true,                  // 是否使用工具提示
+			false                  // 是否生成URL
+		);
+		// 设置标题字体
+		pieChart.getTitle().setFont(new Font(&quot;SimSun&quot;, Font.BOLD, 20));
+		// 设置图例字体
+		pieChart.getLegend().setItemFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12));
+		// 设置饼图样式
+		PiePlot plot = (PiePlot) pieChart.getPlot();
+		plot.setSectionOutlinesVisible(false);
+		plot.setLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12));
+
+		// 将饼图渲染为图像
+		ByteArrayOutputStream chartOutputStream = new ByteArrayOutputStream();
+		ChartUtils.writeChartAsPNG(chartOutputStream, pieChart, 500, 400);
+		ImageData imageData = ImageDataFactory.create(chartOutputStream.toByteArray());
+
+		// 将图像添加到PDF文档中
+		Image chartImage = new Image(imageData);
+		document.add(chartImage);
+
+		document.close();
+		return byteArrayOutputStream.toByteArray();
+	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><h2 id="折线图示例"><a href="#折线图示例" class="header-anchor">#</a> 折线图示例</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>	private byte[] createPdfLine() throws IOException {
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+		PdfDocument pdf = new PdfDocument(writer);
+		Document document = new Document(pdf);
+
+		String fontPath = new ClassPathResource(&quot;fonts/SimSun.ttf&quot;).getFile().getAbsolutePath();
+		PdfFont font = PdfFontFactory.createFont(fontPath);
+		document.add(new Paragraph(&quot;折线图示例&quot;).setFont(font).setFontSize(12));
+
+		// 创建数据集
+		XYSeries series = new XYSeries(&quot;销量&quot;);
+		series.add(0, 200);
+		series.add(1, 300);
+		series.add(2, 400);
+		series.add(3, 500);
+		series.add(4, 600);
+		XYSeriesCollection dataset = new XYSeriesCollection(series);
+		// 创建折线图
+		JFreeChart lineChart = ChartFactory.createXYLineChart(
+				&quot;月度销售量&quot;, // 图表标题
+				&quot;月份&quot;,       // x轴标签
+				&quot;销售额&quot;,     // y轴标签
+				dataset,      // 数据集
+				PlotOrientation.VERTICAL,
+				true,         // 是否显示图例
+				true,         // 是否使用工具提示
+				false         // 是否生成 URL
+		);
+		// 设置标题字体
+		lineChart.getTitle().setFont(new Font(&quot;SimSun&quot;, Font.BOLD, 20));
+		// 设置图例字体
+		lineChart.getLegend().setItemFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12));
+		// 获取绘图区并设置字体
+		XYPlot plot = lineChart.getXYPlot();
+		plot.getDomainAxis().setLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12)); // x轴
+		plot.getRangeAxis().setLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12));  // y轴
+		plot.getDomainAxis().setTickLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 10)); // x轴刻度
+		plot.getRangeAxis().setTickLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 10));  // y轴刻度
+
+		// 设置横坐标标签
+		String[] months = {&quot;1月&quot;, &quot;2月&quot;, &quot;3月&quot;, &quot;4月&quot;, &quot;5月&quot;};
+		SymbolAxis xAxis = new SymbolAxis(&quot;月份&quot;, months);
+		xAxis.setTickLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12)); // 设置字体
+		plot.setDomainAxis(xAxis);
+
+		// 将折线图渲染为图像
+		ByteArrayOutputStream chartOutputStream = new ByteArrayOutputStream();
+		ChartUtils.writeChartAsPNG(chartOutputStream, lineChart, 500, 400);
+		ImageData imageData = ImageDataFactory.create(chartOutputStream.toByteArray());
+
+		// 将图像添加到 PDF 文档中
+		Image chartImage = new Image(imageData);
+		document.add(chartImage);
+
+		document.close();
+		return byteArrayOutputStream.toByteArray();
+	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h2 id="综合示例"><a href="#综合示例" class="header-anchor">#</a> 综合示例</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>	private byte[] createPdfDemo() throws IOException {
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		PdfWriter writer = new PdfWriter(byteArrayOutputStream);
+		PdfDocument pdf = new PdfDocument(writer);
+		Document document = new Document(pdf);
+
+		String fontPath = new ClassPathResource(&quot;fonts/SimSun.ttf&quot;).getFile().getAbsolutePath();
+		PdfFont font = PdfFontFactory.createFont(fontPath);
+		document.add(new Paragraph(&quot;综合示例:&quot;).setFont(font).setFontSize(12));
+
+		// 创建第一个饼图的数据集
+		DefaultPieDataset dataset1 = new DefaultPieDataset();
+		dataset1.setValue(&quot;在线(40)&quot;, 40);
+		dataset1.setValue(&quot;离线(60)&quot;, 60);
+
+		// 创建第二个饼图的数据集
+		DefaultPieDataset dataset2 = new DefaultPieDataset();
+		dataset2.setValue(&quot;授权正常(50)&quot;, 50);
+		dataset2.setValue(&quot;部分过期(20)&quot;, 20);
+		dataset2.setValue(&quot;已过期(30)&quot;, 30);
+
+		// 创建饼图
+		JFreeChart pieChart1 = ChartFactory.createPieChart(
+				&quot;设备状态&quot;, dataset1, true, true, false);
+		JFreeChart pieChart2 = ChartFactory.createPieChart(
+				&quot;授权状态&quot;, dataset2, true, true, false);
+
+		// 设置中文字体
+		setPieChartChineseFont(pieChart1);
+		setPieChartChineseFont(pieChart2);
+
+		// 将饼图渲染为图像
+		ByteArrayOutputStream chartOutputStream1 = new ByteArrayOutputStream();
+		ByteArrayOutputStream chartOutputStream2 = new ByteArrayOutputStream();
+		ChartUtils.writeChartAsPNG(chartOutputStream1, pieChart1, 250, 250);
+		ChartUtils.writeChartAsPNG(chartOutputStream2, pieChart2, 250, 250);
+		ImageData imageData1 = ImageDataFactory.create(chartOutputStream1.toByteArray());
+		ImageData imageData2 = ImageDataFactory.create(chartOutputStream2.toByteArray());
+
+		// 创建一个表格，将两个饼图放在同一行
+		Table pieTable = new Table(2); // 两列表格
+		pieTable.addCell(new Image(imageData1));
+		pieTable.addCell(new Image(imageData2));
+		// 将表格添加到文档中
+		document.add(pieTable);
+
+		Paragraph paragraph = new Paragraph().setFont(font).setFontSize(12);
+		paragraph.add(&quot;数据统计: 2024年1-6月&quot;);
+		document.add(paragraph);
+		// 创建数据集用于折线图
+		XYSeries series = new XYSeries(&quot;销量&quot;);
+		series.add(0, 200);  // &quot;1月&quot;
+		series.add(1, 300);  // &quot;2月&quot;
+		series.add(2, 400);  // &quot;3月&quot;
+		series.add(3, 500);  // &quot;4月&quot;
+		series.add(4, 600);  // &quot;5月&quot;
+		series.add(5, 600);  // &quot;6月&quot;
+		XYSeriesCollection dataset = new XYSeriesCollection(series);
+
+		// 创建折线图
+		JFreeChart lineChart = ChartFactory.createXYLineChart(
+				&quot;月度销售量&quot;, // 图表标题
+				&quot;月份&quot;,       // x轴标签
+				&quot;销售额&quot;,     // y轴标签
+				dataset,      // 数据集
+				PlotOrientation.VERTICAL,
+				true,         // 是否显示图例
+				true,         // 是否使用工具提示
+				false         // 是否生成 URL
+		);
+
+		// 获取绘图区并设置字体
+		XYPlot plot = lineChart.getXYPlot();
+		String[] months = {&quot;1月&quot;, &quot;2月&quot;, &quot;3月&quot;, &quot;4月&quot;, &quot;5月&quot;, &quot;6月&quot;};
+		SymbolAxis xAxis = new SymbolAxis(&quot;月份&quot;, months);
+		xAxis.setTickLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12)); // 设置字体
+		plot.setDomainAxis(xAxis);
+
+		NumberAxis yAxis = new NumberAxis(&quot;销售额&quot;);
+		yAxis.setTickLabelFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12));
+		plot.setRangeAxis(yAxis);
+
+		lineChart.getTitle().setFont(new Font(&quot;SimSun&quot;, Font.BOLD, 20));  // 设置标题字体
+		lineChart.getLegend().setItemFont(new Font(&quot;SimSun&quot;, Font.PLAIN, 12)); // 设置图例字体
+		// 将折线图渲染为图像
+		ByteArrayOutputStream chartOutputStream = new ByteArrayOutputStream();
+		ChartUtils.writeChartAsPNG(chartOutputStream, lineChart, 250, 250);
+		ImageData chartImageData = ImageDataFactory.create(chartOutputStream.toByteArray());
+		Image chartImage = new Image(chartImageData);
+		// 创建表格
+		float[] columnWidths = {1, 2, 2};
+		Table tableData = new Table(columnWidths);
+		tableData.setWidth(250);
+		tableData.addHeaderCell(new Cell().add(new Paragraph(&quot;ID&quot;).setFont(font)));
+		tableData.addHeaderCell(new Cell().add(new Paragraph(&quot;月份&quot;).setFont(font)));
+		tableData.addHeaderCell(new Cell().add(new Paragraph(&quot;销售额&quot;).setFont(font)));
+		for (int i = 1; i &lt;= 6; i++) {
+			tableData.addCell(new Cell().add(new Paragraph(String.valueOf(i)).setFont(font)));
+			tableData.addCell(new Cell().add(new Paragraph(i + &quot;月&quot;).setFont(font)));
+			tableData.addCell(new Cell().add(new Paragraph(&quot;Item &quot; + i + &quot; description.&quot;).setFont(font)));
+		}
+		// 将折线图和表格放在同一行中
+		Table containerTable = new Table(2);
+		containerTable.addCell(new Cell().add(chartImage).setBorder(null));  // 折线图放在左边
+		containerTable.addCell(new Cell().add(tableData).setBorder(null));       // 表格放在右边
+		// 将容器表格添加到文档中
+		document.add(containerTable);
+
+		document.close();
+		return byteArrayOutputStream.toByteArray();
+	}
+
+	private static void setPieChartChineseFont(JFreeChart chart) {
+		// 获取饼图的绘图对象
+		PiePlot plot = (PiePlot) chart.getPlot();
+		// 设置饼图标题字体和图例字体（如需要）
+		chart.getTitle().setFont(new java.awt.Font(&quot;SimSun&quot;, java.awt.Font.BOLD, 20));
+		chart.getLegend().setItemFont(new java.awt.Font(&quot;SimSun&quot;, java.awt.Font.PLAIN, 10));
+		// 设置标签字体
+		plot.setLabelFont(new java.awt.Font(&quot;SimSun&quot;, java.awt.Font.PLAIN, 10));
+	}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">2021-04-07: </span> <span class="time">8/14/2024, 3:34:47 PM</span></div></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----><div></div><!----><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="https://music.163.com/song/media/outer/url?id=316756.mp3" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img src="https://p2.music.126.net/qOOTIykbSLw9RHB0vI83GA==/737772302281958.jpg" data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(https://p2.music.126.net/qOOTIykbSLw9RHB0vI83GA==/737772302281958.jpg);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>大城小事</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>杨千嬅</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div><!----></div></div>
+    <script src="/assets/js/app.5a9922ae.js" defer></script><script src="/assets/js/4.006c63d4.js" defer></script><script src="/assets/js/1.288c0ca6.js" defer></script><script src="/assets/js/22.efadb99b.js" defer></script><script src="/assets/js/13.ee825438.js" defer></script>
+  </body>
+</html>
